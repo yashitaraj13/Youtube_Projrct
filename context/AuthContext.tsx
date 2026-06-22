@@ -160,11 +160,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     user?.state && southStates.includes(user.state),
   );
   // Light theme: South Indian user AND time is 10:00–11:59 IST
-  const isLightTheme = true;
-   // const isLightTheme =
-   //  isSouthIndian &&
-   //  currentHour >= 10 &&
-   //  currentHour < 12;
+  // const isLightTheme = true;
+   const isLightTheme =
+    isSouthIndian &&
+    currentHour >= 10 &&
+    currentHour < 12;
 
   useEffect(() => {
     document.body.classList.toggle("light-theme", isLightTheme);
